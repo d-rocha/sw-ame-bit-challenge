@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '../Button';
 import { Link } from 'react-router-dom';
 
-const errorImg = require('../../assets/images/sw-error-1.gif');
+const errorImg = require('../../assets/images/sw-error.gif');
 
 const Error = () => (
   <div>

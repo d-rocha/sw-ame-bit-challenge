@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import api from '../../services/data/api';
 import Button from '../Button';
 import Loader from '../Loader';
+import Error from '../Error';
 
 export default class Main extends Component {
     constructor(props) {
@@ -15,6 +16,7 @@ export default class Main extends Component {
                 films: []
             },
             loader: false,
+            error: false
         }
     }
 
@@ -33,16 +35,21 @@ export default class Main extends Component {
         this.getPlanetId(id).then(planet => {
             this.setState({
                 planet: planet.data,
-                loader: false
+                loader: false,
+                error: false
             })
         }).catch(error => {
-            this.setState({ loader: false });
+            this.setState({ loader: false, error: true });
         });
     };
 
     render() {
         if (this.state.loader) {
             return <Loader />
+        }
+
+        if (this.state.error) {
+            return <Error />
         }
 
         return (

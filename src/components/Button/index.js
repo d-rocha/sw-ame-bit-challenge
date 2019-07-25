@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-const Button = () => (
+export default class Button extends Component {
+    static defaultProps = {
+        children: "START"
+    };
 
-    <button>START</button>
-);
+    static propTypes = {
+        onClick: PropTypes.func,
+        children: PropTypes.string
+    }
 
-export default Button;
+    render() {
+        return (
+            <button onClick={this.props.onClick}>
+                {this.props.children}
+            </button>
+        );
+    }
+}

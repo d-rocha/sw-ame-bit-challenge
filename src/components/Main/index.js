@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import api from '../../services/data/api';
+import Button from '../Button';
 
 export default class Main extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
         this.state = {
             planet: {
@@ -15,7 +16,7 @@ export default class Main extends Component {
         }
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.nextPlanet();
     }
 
@@ -33,7 +34,7 @@ export default class Main extends Component {
         })
     };
 
-    render(){
+    render() {
         return (
             <div className='container'>
                 <div id='planet-card'>
@@ -43,9 +44,9 @@ export default class Main extends Component {
                     <p>Terrain:<span>{this.state.planet.terrain}</span></p>
                     <p>Featured in Films:<span>{this.state.planet.films.length}</span></p>
                 </div>
-                <div><button type="button" onClick={this.nextPlanet}>NEXT</button></div>
+                <div><Button onClick={this.nextPlanet}>NEXT</Button></div>
             </div>
 
-        );        
+        );
     }
 }

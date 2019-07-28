@@ -5,6 +5,32 @@ O desafio consiste em construir uma aplicação para auxiliar o apresentador de 
 que dado um planeta aleatório da franquia star wars, apresente seus dados e pergunte aos participantes
 como seria o clima, o terreno e em quantos filmes da franquia ele apareceu. 
 
+## Tecnologias Utilizadas
+
+- HTML 5
+- CSS 3
+  - [Nostalgic NES](https://nostalgic-css.github.io/NES.css)
+  - [Parallax Depth Cards](https://codepen.io/andymerskin/pen/XNMWvQ)
+  - [Star Trek: The Next Generation](https://codepen.io/AllOfTheD/pen/fvBqm)
+- Javascript (ES6)
+- [ReactJS](https://reactjs.org/)
+- [React-router-dom](https://www.npmjs.com/package/react-router-dom)
+- [Axios](https://github.com/axios/axios)
+- [SWAPI API](https://swapi.co/)
+
+# Para acessar o projeto:
+
+[CLIQUE AQUI](https://sw-bit-challenge.herokuapp.com/)
+
+ou
+
+Copie o link abaixo e cole no navegador.
+
+```
+https://sw-bit-challenge.herokuapp.com/
+
+```
+
 ## Execução do Projeto
 
 ### YARN / NPM

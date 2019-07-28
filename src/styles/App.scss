@@ -1,0 +1,20 @@
+@import './keyframes';
+@import './variables';
+@import './placeholder';
+@import './mixins';
+
+.stars, .twinkling {
+  @extend %stars-twinklig-config;
+}
+
+.stars {
+  background: $star-black-bg;
+  z-index:-10;
+}
+
+.twinkling{
+  @include twinklig-animation;
+  
+  background:transparent url(https://dylanshearer.com.au/codepen/nextgen/twinkling.png) repeat top center;
+  z-index:-10;
+} 

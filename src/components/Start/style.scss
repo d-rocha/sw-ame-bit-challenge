@@ -1,0 +1,67 @@
+@import '../../styles/placeholder.scss';
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+#intro-text {
+    @extend %margin-tlr;
+    @extend %flexbox-base;
+    margin-top: 20%;
+    color: $intro-color;
+    font-weight: 700;
+    letter-spacing: .1em;
+    font-size: 34.6667px;
+}
+
+.banner {
+    @extend %margin-tlr;
+    @extend %flexbox-base;
+    margin-top: -40px;
+    img {
+        max-width: 80%;
+    }
+}
+
+.msg-press-start {
+    @extend %flexbox-base;
+    @include blink-animation;
+    margin-top: -60px;
+    color: $white;
+}
+
+.nes-text {
+    color: $white !important;
+}
+
+.btn-start{
+  @extend %flexbox-base;
+  margin-top: 20px;
+}
+
+@media (max-width: $md){
+
+  #intro-text{
+    font-size: 25px;
+    margin-top: 50%;
+  }
+
+  .banner {
+    margin-top: 130px;
+    img {
+        max-width: 100%;
+    }
+  }
+  
+  .msg-press-start{
+    margin-top: 5px;
+  }
+
+  .btn-start{
+      font-size: 1.25em;
+  }
+}
+
+@media (min-width: $xl){
+  .banner {
+      margin-top: 170px;
+  }   
+}

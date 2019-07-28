@@ -1,0 +1,173 @@
+@import '../../styles/variables.scss';
+@import '../../styles/placeholder.scss';
+@import '../../styles/mixins.scss';
+
+.container {
+    @extend %flexbox-base;
+    padding-left: 40px;
+    flex-wrap: wrap;
+}
+
+.title {
+    @extend %title-info;
+}
+
+.card-wrap {
+    @extend %card-wrap-info;
+
+    &:hover {
+        .card-info {
+            transform: translateY(0);
+
+            p {
+                opacity: 1;
+                @include transition-06s;
+            }
+        }
+    }
+}
+
+.card-wrap {
+    &:hover {
+        .card-info {
+            p {
+                @include transition-01s;
+            }
+        }
+    }
+}
+
+.card-wrap {
+    &:hover {
+       .card-bg {
+        @include transition-01s;
+       } 
+    }
+}
+
+.card-wrap {
+    &:hover {
+       .card {
+        @extend %box-shadow-card-hover;
+       } 
+    }
+}
+
+.card {
+    @extend %card;
+}
+
+.card-bg {
+    @extend %card-bg-config;
+}
+
+.card-info {
+    @extend %card-info-config;
+}
+
+.card-info h1 {
+    @extend %card-info-h1;
+}
+
+.card-info p {
+    @extend %card-info-p;
+}
+
+.card-info span {
+    @extend %card-info-span;
+}
+
+.arrow-indicator {
+    @extend %arrow;
+
+    img {
+        position: absolute;
+        left: 280px;
+    }
+}
+
+.card-wrap { 
+    &:hover {
+        .arrow-indicator {
+            display: none;
+        }
+    }
+}
+
+#btn-next {
+    @extend %button-config;
+    font-size: 18px;
+}
+
+.loading { 
+    img {
+        @extend %flexbox-base;
+        width: 30%;
+        margin-top: 10%;
+        margin-left: 33.33%;
+    }
+}
+
+.loading {
+    .loading-msg {
+        @extend %flexbox-base;
+        @extend %wh-default;
+        color: $white;
+        font-size: 1.25em;
+    }
+}
+
+@media (max-width: $sm){
+    .card {
+        min-width: 260px;
+    }
+
+    .loading {
+        img {
+            width: 80%;
+            margin-left: 7%;
+            margin-top: 30%;
+        }
+    }
+
+    .loading {
+        .loading-msg {
+            font-size: 1em; 
+        }
+    }
+
+    .arrow-indicator { 
+        img {
+            position: absolute;
+            left: 200px;
+        }
+    }
+}
+
+@media (min-width: $xl){
+    .title {
+        margin-top: 40px;
+    }
+
+    .card {
+        min-width: 500px;
+        min-height: 700px;
+    }
+
+    .card-info {
+        padding-top: 5%;
+    }
+
+    .arrow-indicator {
+        img {
+            position: absolute;
+            left: 430px; 
+        }
+    }
+    
+    .loading { 
+        .loading-msg {
+            font-size: 2.25em;
+        }
+    }
+}

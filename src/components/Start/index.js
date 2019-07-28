@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../Button';
 
+import './style.scss';
+
 export default class Start extends Component {
   constructor(props) {
     super(props)
@@ -37,7 +39,7 @@ export default class Start extends Component {
         intro: {
           img: <img src={banner} alt="banner" />,
           msg: 'Press Start',
-          btn: <Button><Link to="/main">SALVAR</Link></Button>
+          btn: <Button><Link className='nes-btn is-warning' to="/main">START</Link></Button>
         }
       })
     }, 4000)

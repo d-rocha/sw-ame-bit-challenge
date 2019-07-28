@@ -1,0 +1,34 @@
+@import './variables';
+
+@mixin transition-01s{
+    transition: $s01;
+}
+
+@mixin transition-05s{
+    transition: $s05;
+}
+
+@mixin transition-06s{
+    transition: $s06;
+}
+
+@mixin transition-05s06s{
+    transition: $s0506;
+}
+
+@mixin transition-1s{
+    transition: $s1;
+}
+
+
+@mixin blink-animation {
+    animation: $blink;
+}
+
+@mixin twinklig-animation {
+    -moz-animation:move-twink-back 200s linear infinite;
+  -ms-animation:move-twink-back 200s linear infinite;
+  -o-animation:move-twink-back 200s linear infinite;
+  -webkit-animation:move-twink-back 200s linear infinite;
+  animation:move-twink-back 200s linear infinite;
+}

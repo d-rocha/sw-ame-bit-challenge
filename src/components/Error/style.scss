@@ -1,0 +1,59 @@
+@import '../../styles/variables';
+@import '../../styles/placeholder';
+@import '../../styles/mixins.scss';
+
+.retry-btn {
+    @extend %button-config;
+    font-size: 18px;
+}
+
+.retry {
+    @extend %flexbox-base;
+    @include blink-animation;
+    margin-top: 20px;
+    color: $white;
+    font-size: 1.25em;
+}
+
+.error {
+    img{
+        @extend %flexbox-base;
+        width: 50%;
+        margin-top: 10%;
+        margin-left: 25%;
+    }
+}
+
+.error {
+    .error-msg {
+        @extend %flexbox-base;
+        @extend %wh-default;
+        margin-top: 20px;
+        color: $white;
+        font-size: 1.25em;
+    }
+}
+
+@media (max-width: $sm){
+  .error{
+    img{
+      width: 85%;
+      margin-left: 8%;
+      margin-top: 40%;
+    }
+  }
+
+  .error{
+    .error-msg {
+      margin-left: 7%;
+    }
+  }
+}
+
+@media (max-width: $md){
+  .error{
+    .error-msg {
+      margin-left: 4%;
+    }
+  }
+}

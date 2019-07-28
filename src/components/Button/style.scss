@@ -1,0 +1,11 @@
+@import '../../styles/_placeholder.scss';
+
+button{
+    padding: 0px;
+    border: 0px;
+    background-color:rgba(35,23,35,0.5);
+}
+
+.button {
+    @extend %button-config;
+}
